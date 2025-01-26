@@ -1,2 +1,3 @@
-#vs-code
-the goal is to be persistent in everything
+# begginer
+
+its my first devs
