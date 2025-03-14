@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>subscribe to our consent form</title>
+<style>
+.consent{
+display:none;
+font-size:medium;
+position:absolute;
+Z-index:1000;
+bottom: 5px;;
+right: 6px;;
+width:40%;
+background-color:grey;
+height:20%;
+padding: 23px;
+text-align:center;
+font-size:24px;
+    
+
+}
+.consent button{
+background-color:blue;
+text-align:center;
+font-size:20px;
+padding:10px 30px;
+cursor:pointer;
+}
+</style>
+</head>
+<body>
+<h1>this is a consent form</h1>
+<div id="consenting" class="consent">
+<p><b> subscribe to our daily newsletter</b></p>
+<button id="buttonId" >ACCEPT</button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+const consenting=document.getElementById('consenting');
+const button=document.getElementById('buttonId');
+
+function checkCookie(name){
+const cookiesName =`${name}=`;
+const cookies=decodeURIComponent(document.cookie);
+const cookiArray =cookies.split(';');
+for (let i=0; i < cookiArray.length ;i++){
+let cook =cookiArray[i].trim();
+if(cook.indexOf(cookiesName)=== 0){
+return true;
+}
+}
+return false;
+}
+if(!checkCookie('cookieConsent')){
+consenting.style.display ='block';
+}
+button.addEventListener('click' ,function(){
+document.cookie ="cookieConsent=true; max-age=" +(160);
+consenting.style.display='none';
+});
+});
+
+</script>
+</body>
+</html>

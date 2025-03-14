@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta  charset="UTF-8">
+<meta name="viewport" content="width=device-width ,  intial-scale=1.0">
+<meta http-equiv="refresh" content="44">
+<title>temperature converter</title>
+<style>
+
+body {
+  
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin:40px 60px 60px 60px;
+padding:50px; 
+box-shadow: 0px 20px 25px 0px rgba(0,0,0,0.2);
+height: 400px;
+width:fit-content;
+}
+
+.calculator{
+display:inline-flex;
+margin:120px 40px 30px 60px;
+gap:15px;
+
+}
+
+.dropdown-content{
+display:none;
+ position: absolute;
+  background-color: white;
+  min-width: 150px; /* Match the width of the drop-down */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.drop-down:hover .dropdown-content{
+display:block;
+}
+.dropdown-content p:hover{
+background-color:grey;
+}
+.dropdown-content p{
+ color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.drop-down , .sumbit , .text {
+border-radius: 10px ;
+width: 170px;
+height:50px;
+ box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.submit {
+  border-radius: 3px;
+  width: 120px;
+background-color:green;
+font-size:30px;
+}
+.output , .reset {
+  
+  align-items: center;
+  justify-content: center;
+  color: black;
+    padding: 10px;
+    margin: 20px;
+border-radius: 5px;
+border:4px ;
+    font-size: 35x; 
+width: 250px;
+height:50px;
+ box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+align-items:center;
+align-content:center;
+}
+.reset{
+background-color:red;
+font-size:30px;
+}
+.btn{
+
+display:inline;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class ="calculator"> 
+<input type="number" class="text " max-value="4" placeholder="0.00" required>
+
+<select class="drop-down" id="from" required>
+    <option value="" disabled selected>convert from</option>
+    <option value="fahrenheit">Fahrenheit</option>
+    <option value="celsius">Celsius</option>
+    <option value="kelvin">Kelvin</option>
+  </select>
+
+<select class="drop-down" id="to" required>
+    <option value="" disabled selected>convert to</option>
+    <option value="fahrenheit">Fahrenheit</option>
+    <option value="celsius">Celsius</option>
+    <option value="kelvin">Kelvin</option>
+  </select>
+
+<input type="submit" atrribute=" "  class="submit" value="convert ">
+
+</div>
+
+</div class="btn">
+
+ <div class="output" id="output">Result</div>
+<div class="reset" id="reset" >reset</div>
+</div>
+</div>
+
+
+<script>
+const reset =document.getElementById('reset');
+document.querySelector('.submit').addEventListener('click' , function(){
+const degree=parseFloat(document.querySelector('.text').value);
+const from =document.getElementById('from').value;
+const to= document.getElementById('to').value;
+let result;
+
+if(from==='fahrenheit' && to ==='kelvin'){
+ result= (degree - 32) * 5 / 9 + 273.15;
+}
+else if (from==='fahrenheit' && to ==='celsius'){
+result=  (degree - 32) * 5 / 9;
+}
+else if (from==='kelvin' && to ==='fahrenheit'){
+
+result=  (degree -273.15) * 9/ 5 + 32;
+}
+else if(from ==='kelvin '&& to==='celsius'){
+result=  degree - 273.15;
+}
+else if(from==='celsius' && to ==='kelvin'){
+result=  degree + 273.15;
+}else if (from === 'celsius' && to === 'fahrenheit'){
+result=  (degree * 9) / 5 + 32;
+}
+else{
+ result = 'conversion not supported';
+}
+document.getElementById('output').textContent = result.toFixed(2);
+});
+
+reset.addEventListener('click' ,function(){
+document.getElementById('output').textContent="";
+  document.querySelector('.text').value="";;
+ document.getElementById('from').value="";
+  document.getElementById('to').value="";
+
+});
+
+</script>
+</body>
+</html>

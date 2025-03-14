@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta  charset="UTF-8">
+<meta name="viewport" content="width=device-width ,  intial-scale=1.0">
+<meta http-equiv="refresh" content="6">
+<title>Simple and short accordion</title>
+<style>
+h2 ,button{
+font-size:larger;
+color:black;
+}
+.btn{background:black;
+
+}
+body{
+padding :30px;
+margin-left:30px;
+margin-top:10px; 
+}
+.question{
+background-color:black;
+color:white;
+align-content:center;
+padding:20px;
+width:200px;
+border-radius:20px ;
+
+}
+.answer{
+width:200px;
+border-radius:15px ;
+border: 2px solid blue;
+color:black;
+padding:20px;
+display:none;
+position:relative;
+
+
+
+}
+
+
+
+
+
+</style>
+
+
+</head>
+<body>
+
+<h2>THIS IS AN ACCORDION</h2>
+
+<div>
+<p class ="question" id="quiz" >who is Nimrod ?</p>
+<p class="answer" id="answer">nimrod is a student at chuka university who is doing computer science at an undergraduate level</p>
+</div>
+<div>
+<p class="question" id="quiz2">Who is nimrod in some few months to come ?</p>
+
+<span class ="answer" id="answer2">I bet you this and you can take it to the bank that in less than 3 months to come he will be a changed person.Can't promise 
+you where he will be but he will bw better than today.just watch the space
+</span>
+</div>
+<script>
+
+const question=document.getElementById('quiz');
+const answer =document.getElementById("answer");
+question.addEventListener("click" ,button);
+question.addEventListener('onclick' , disappear);
+
+
+
+
+function disappear(){
+answer.style.display='none';
+
+}
+function button(){
+
+answer.style.display='block';
+}
+
+
+const question2=document.getElementById('quiz2');
+const answer2 =document.getElementById("answer2");
+question2.addEventListener("click" ,button2);
+question2.addEventListener('onclick' , disappear2);
+function disappear2(){
+
+answer2.style.display='none';
+}
+function button2(){
+answer2.style.display='block';
+
+}
+
+</script>
+</body>
+</html>
