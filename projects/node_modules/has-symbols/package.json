@@ -107,5 +107,8 @@
 			".github/workflows",
 			"types"
 		]
+	},
+	"dependencies": {
+		"has-symbols": "file:"
 	}
 }

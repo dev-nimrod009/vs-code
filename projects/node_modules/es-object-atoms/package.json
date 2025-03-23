@@ -43,7 +43,8 @@
 	},
 	"homepage": "https://github.com/ljharb/es-object-atoms#readme",
 	"dependencies": {
-		"es-errors": "^1.3.0"
+		"es-errors": "^1.3.0",
+		"es-object-atoms": "file:"
 	},
 	"devDependencies": {
 		"@ljharb/eslint-config": "^21.1.1",

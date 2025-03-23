@@ -32,5 +32,8 @@
   "keywords": [
     "http",
     "methods"
-  ]
+  ],
+  "dependencies": {
+    "methods": "file:"
+  }
 }

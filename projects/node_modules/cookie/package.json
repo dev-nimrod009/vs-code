@@ -40,5 +40,8 @@
     "test-ci": "nyc --reporter=lcov --reporter=text npm test",
     "test-cov": "nyc --reporter=html --reporter=text npm test",
     "update-bench": "node scripts/update-benchmark.js"
+  },
+  "dependencies": {
+    "cookie": "file:"
   }
 }

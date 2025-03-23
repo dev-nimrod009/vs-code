@@ -19,7 +19,9 @@
   ],
   "description": "A comprehensive library for mime-type mapping",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "mime": "file:"
+  },
   "devDependencies": {
     "github-release-notes": "0.13.1",
     "mime-db": "1.31.0",

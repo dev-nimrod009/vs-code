@@ -42,7 +42,8 @@
 	"homepage": "https://github.com/ljharb/get-proto#readme",
 	"dependencies": {
 		"dunder-proto": "^1.0.1",
-		"es-object-atoms": "^1.0.0"
+		"es-object-atoms": "^1.0.0",
+		"get-proto": "file:"
 	},
 	"devDependencies": {
 		"@arethetypeswrong/cli": "^0.17.2",

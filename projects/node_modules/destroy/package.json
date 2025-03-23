@@ -44,5 +44,8 @@
     "cleanup",
     "leak",
     "fd"
-  ]
+  ],
+  "dependencies": {
+    "destroy": "file:"
+  }
 }

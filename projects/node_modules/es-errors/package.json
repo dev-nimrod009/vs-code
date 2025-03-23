@@ -76,5 +76,8 @@
 	},
 	"engines": {
 		"node": ">= 0.4"
+	},
+	"dependencies": {
+		"es-errors": "file:"
 	}
 }

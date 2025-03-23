@@ -30,5 +30,8 @@
     "tests.js",
     "dangerous.js",
     "safer.js"
-  ]
+  ],
+  "dependencies": {
+    "safer-buffer": "file:"
+  }
 }

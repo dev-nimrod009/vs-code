@@ -35,5 +35,8 @@
     "lint": "eslint .",
     "test": "mocha test/",
     "test-cov": "nyc --reporter=html --reporter=text npm test"
+  },
+  "dependencies": {
+    "merge-descriptors": "file:"
   }
 }

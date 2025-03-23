@@ -77,5 +77,8 @@
 		"ignore": [
 			".github/workflows"
 		]
+	},
+	"dependencies": {
+		"es-define-property": "file:"
 	}
 }

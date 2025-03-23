@@ -38,7 +38,8 @@
 	"homepage": "https://github.com/ljharb/side-channel-list#readme",
 	"dependencies": {
 		"es-errors": "^1.3.0",
-		"object-inspect": "^1.13.3"
+		"object-inspect": "^1.13.3",
+		"side-channel-list": "file:"
 	},
 	"devDependencies": {
 		"@arethetypeswrong/cli": "^0.17.1",

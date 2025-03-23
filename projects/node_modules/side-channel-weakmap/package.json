@@ -47,7 +47,8 @@
 		"es-errors": "^1.3.0",
 		"get-intrinsic": "^1.2.5",
 		"object-inspect": "^1.13.3",
-		"side-channel-map": "^1.0.1"
+		"side-channel-map": "^1.0.1",
+		"side-channel-weakmap": "file:"
 	},
 	"devDependencies": {
 		"@arethetypeswrong/cli": "^0.17.1",

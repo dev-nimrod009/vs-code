@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta  name="viewport" content="width=device-width intialscale=1.0">
+<meta charset="UTF-8" >
+<meta  http-equiv="refresh" content="3">
+<title>COMMING SOON </title>
+<style>
+h3{
+color:aliceblue;
+font-size: 46px;
+font-family:arial;
+align-items:center;
+margin:-6px 0px 0px 40px;
+}
+.container{
+display:inline-flex;
+gap:10px;
+margin:12px 0px 0px 130px;
+width: 1000px;
+height: 550px;
+box-shadow:2px 5px 7px 2px rgb(114, 110, 110);
+}
+.minute,.hours,.days,.seconds{
+box-shadow:2px 5px 7px 2px white;
+width: 200px;
+height: 200px;
+align-items:center;
+align-content:center;
+margin:80px 10px 10px 30px;
+background-color:black;
+}
+input{
+height:120px;
+margin:0px 0px -60px 15px;
+font-size:128px;
+width:165px;
+align-items:center;
+align-content:center;
+color:white;
+background-color:transparent;
+}
+p{
+color:white;
+font-size:140px;
+margin:20px 0px 0px 25px;
+
+}
+
+.button{
+margin:420px 0px 0px -880px;
+display:inline-flex;
+gap:200px;
+}
+#reset , #start{
+width:180px;
+height:70px;
+font-size: 40px;
+}
+</style>
+</head>
+<body>
+
+<h1>this is a comming soon page</h1>
+
+<div class="container">
+
+<div class="days">
+<h3><b>DAYS</b></h3>
+<input type="number" placeholder="00" id="day"></input>
+</div>
+
+
+<div class="hours">
+<h3>HRS</h3>
+<input type="number" placeholder="00" id="hrs"></input>
+</div>
+
+<div class="minute">
+<h3><b>MIN</b></h3>
+<input type="number" placeholder="07" id="min"></input>
+</div>
+
+<div class="seconds">
+<h3><b>SEC</b></h3>
+<input type="number" placeholder="00" id="sec"></input>
+</div>
+<div class="button">
+<button id="reset" >RESET</button>
+<button id="start">START</button>
+</div>
+</div>
+
+<script>
+const day=document.parseFloat(getElementById('day').value);
+const hrs=document.parseFloat(getElementById('hrs').value);
+const min=document.parseFloat(getElementById('min').value);
+const sec=document.parseFloat(getElementById('sec').value);
+
+function comingSoon(day , hrs , min , sec){
+let totalSec=(day*24*60*60)+(hrs*60*60)+(min*60)+sec;
+
+function myTimer(){
+
+const finalDays=Math.floor(totalSec/86400);
+const finalHrs=Math.floor((totalSec % 86400)/3600);
+const finalmin=Math.floor((totalSec %3600) /60);
+const finalsec = Math.floor(totalSec  % 60);
+
+const fDays=String(finalDays).padStart(2 ,'0');
+const fHour=String(finalHrs).padStart(2 ,'0');
+const fMin=String(finalmin).padStart(2 ,'0');
+const fSec=String(finalsec).padStart(2 ,'0');
+
+
+document.getElementById('day').textContent=fDays;
+document.getElementById('hrs').textContent=fHour;
+document.getElementById('min').textContent=fMin;
+document.getElementById('sec').textContent=fSec;
+
+ totalSec--;}
+
+setInterval(myTimer ,1000);
+}
+comingSoon(0 ,0 ,10 ,58);
+const start =document.getElementById('start' );
+start.addEventListener('click',myTimer());
+
+</script>
+</body>
+
+
+</html>
+<!-- function ComingSoonPage() {
+  return (
+    <html lang="en">
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>COMING SOON</title>
+        <style>
+          {/* Add your styles here */}
+        </style>
+      </head>
+      <body>
+        <h1>This is a coming soon page</h1>
+      </body>
+    </html>
+  );
+}
+
+export default ComingSoonPage; -->

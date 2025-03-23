@@ -40,7 +40,8 @@
 		"call-bound": "^1.0.2",
 		"es-errors": "^1.3.0",
 		"get-intrinsic": "^1.2.5",
-		"object-inspect": "^1.13.3"
+		"object-inspect": "^1.13.3",
+		"side-channel-map": "file:"
 	},
 	"devDependencies": {
 		"@arethetypeswrong/cli": "^0.17.1",

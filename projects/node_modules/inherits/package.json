@@ -25,5 +25,8 @@
   "files": [
     "inherits.js",
     "inherits_browser.js"
-  ]
+  ],
+  "dependencies": {
+    "inherits": "file:"
+  }
 }

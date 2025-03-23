@@ -48,7 +48,8 @@
 	},
 	"homepage": "https://github.com/inspect-js/hasOwn#readme",
 	"dependencies": {
-		"function-bind": "^1.1.2"
+		"function-bind": "^1.1.2",
+		"hasown": "file:"
 	},
 	"devDependencies": {
 		"@arethetypeswrong/cli": "^0.15.1",

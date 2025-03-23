@@ -31,16 +31,17 @@
         "./lib/streams": false
     },
     "devDependencies": {
+        "async": "*",
+        "errto": "*",
+        "iconv": "*",
+        "istanbul": "*",
         "mocha": "^3.1.0",
         "request": "~2.87.0",
-        "unorm": "*",
-        "errto": "*",
-        "async": "*",
-        "istanbul": "*",
         "semver": "*",
-        "iconv": "*"
+        "unorm": "*"
     },
     "dependencies": {
+        "iconv-lite": "file:",
         "safer-buffer": ">= 2.1.2 < 3"
     }
 }

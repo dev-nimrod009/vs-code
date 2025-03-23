@@ -37,6 +37,7 @@
 	},
 	"homepage": "https://github.com/ljharb/call-bind-apply-helpers#readme",
 	"dependencies": {
+		"call-bind-apply-helpers": "file:",
 		"es-errors": "^1.3.0",
 		"function-bind": "^1.1.2"
 	},

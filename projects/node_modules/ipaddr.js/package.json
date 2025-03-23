@@ -6,7 +6,9 @@
   "directories": {
     "lib": "./lib"
   },
-  "dependencies": {},
+  "dependencies": {
+    "ipaddr.js": "file:"
+  },
   "devDependencies": {
     "coffee-script": "~1.12.6",
     "nodeunit": "^0.11.3",
