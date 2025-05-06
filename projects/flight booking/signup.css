@@ -1,0 +1,144 @@
+
+
+
+:root {
+    --primary-color: #ff4500; /* Bright orange for highlights */
+    --secondary-color: #2c3e50; /* Dark blue-gray for text */
+    --background-color: #f9f9f9; /* Light gray for background */
+    --border-color: #ddd; /* Light gray for borders */
+    --button-color: #28a745; /* Green for buttons */
+    --button-hover-color: #218838; /* Darker green for hover */
+    --font-family: 'Roboto', sans-serif; /* Modern and clean font */
+}
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color); /* Light background for contrast */
+    color: var(--secondary-color); /* Dark blue-gray for text */
+    display: grid;
+     
+    align-items: center;
+    height: 100vh;  
+}
+button{
+
+width:70px;
+height:30px
+}
+input{
+height:30px;
+width:250px;
+}
+ 
+.signcontainer{
+display:grid;
+justify-content:center;
+ border: 2px solid var(--border-color);
+width:350px;
+justify-items:center;
+gap:15px;
+margin:20px auto;
+
+ background-color: white;
+ padding: 20px;
+border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    
+}
+.signtext{
+font-size:20px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+
+.buttons{
+display:flex;
+gap:50px;
+width: 100%;
+}
+.s-or{
+font-size:20px;
+color: #7f8c8d; /* Light gray for subtlety */
+    text-align: center;
+}
+.signupinfo{
+display:grid;
+gap:10px;
+
+}
+.continue{
+
+    background-color: var(--button-color);
+height:40px;
+width:100%;
+right:0;
+gap:10px;
+margin:20px auto;
+border:none;
+border-radius:4px;
+cursor:pointer;
+ color: white;
+font-size:16px;
+font-weight:bold;
+transition: background-color 0.3s ease;
+    margin-top: 10px;
+
+}
+
+
+
+
+
+
+.continue:hover {
+    background-color: var(--button-hover-color); /* Darker green on hover */
+}
+.buttons button {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttons button:first-child {
+    background-color: #db4437; /* Google red */
+    color: white;
+}
+
+.buttons button:last-child {
+    background-color: #333; /* GitHub black */
+    color: white;
+}
+
+.buttons button:hover {
+    opacity: 0.9;
+}
+ 
+.signupinfo label {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.signupinfo input {
+    height: 20px;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.signupinfo input:focus {
+    border-color: var(--primary-color); /* Highlight border on focus */
+    outline: none;
+}

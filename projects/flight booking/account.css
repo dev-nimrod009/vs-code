@@ -1,0 +1,161 @@
+
+
+
+
+:root {
+    --primary-color: #ff4500;  
+    --secondary-color: #2c3e50; 
+    --background-color: #f9f9f9;  
+    --border-color: #ddd;  
+    --button-color: #28a745; 
+    --button-hover-color: #218838;  
+    --font-family: 'Roboto', sans-serif;  
+}
+ 
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color); 
+    color: var(--secondary-color) ;
+    height: 100vh; 
+    
+}
+
+.left-nav{
+height:100vh;
+display: flex;
+    flex-direction: column;
+width:200px;
+gap:20px;
+position:sticky;
+border-right: 2px solid var(--border-color);
+ padding:15px;
+font-size:22px;
+margin-left:20px;
+ 
+float:left;
+background-color: white;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+ 
+.main-body {
+    display: grid;
+    
+    gap: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+
+.profile-details ,.email-details,.phone-details,.connected-accounts{
+display:flex;
+   gap:55px;
+border-bottom:  0.1px solid black;
+height:100%;
+
+   
+ border: 1px solid var(--border-color);
+border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+padding: 20px;
+}
+.min-profile ,.mini-email ,.mini-number ,.mini-accounts{
+
+gap:10px;
+right:20px;
+ display: flex;
+    flex-direction: column;
+  background-color: white;
+ height: fit-content;
+}
+
+
+
+
+
+
+
+
+.profile-details p,
+.email-details p,
+.phone-details p,
+.connected-accounts p {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+button {
+    background-color: var(--button-color);
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+text-align:center;
+height:29px;
+}
+button:hover {
+    background-color: var(--button-hover-color);
+}
+.left-nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    padding: 10px 15px;  
+    border-radius: 4px;  
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+ 
+.left-nav a.active {
+    background-color: var(--background-color);  
+    color: var(--primary-color); 
+    font-weight: bold;  
+transition: background-color 0.3s ease, color 0.3s ease;  
+
+}
+
+ 
+.left-nav a:hover {
+    background-color: var(--background-color); 
+    color: var(--primary-color);  
+}
+
+@media (max-width: 768px) {
+    .main-body {
+        grid-template-columns: 1fr; 
+    }
+
+    .left-nav {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 2px solid var(--border-color);
+    }
+
+    .min-profile,
+    .mini-email,
+    .mini-number,
+    .mini-accounts {
+        display: none;  
+    }
+
+ 
+    .left-nav {
+        width: 100%;  
+        height: auto;
+        border-right: none;
+        border-bottom: 2px solid var(--border-color);
+        flex-direction: row;  
+        justify-content: space-around;
+    }
+
+    .left-nav a {
+        padding: 10px;  
+        font-size: 14px; 
+    }
+}

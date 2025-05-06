@@ -1,0 +1,72 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #2c3e50;
+}
+ 
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+.confirmation-message h2 {
+  font-size: 2rem;
+  color: #28a745;
+  margin-bottom: 10px;
+}
+
+.confirmation-message p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.booking-details {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: left;
+}
+
+.booking-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ff4500;
+}
+
+.booking-details p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.call-to-action {
+  margin-top: 20px;
+}
+
+.call-to-action .button,
+.call-to-action button {
+  display: inline-block;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.call-to-action .button:hover,
+.call-to-action button:hover {
+  background-color: #218838;
+}
+ 
