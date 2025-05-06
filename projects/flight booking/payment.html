@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment</title>
+  <link rel="stylesheet" href="payment.css">
+<link rel="stylesheet" href="header.css">
+</head>
+<body>
+ <header>
+<div  >
+   <div class="homeheader">
+ 
+<p>AIRLOVERS</p>
+<a href="#">Home</a>
+<a href="">About</a>
+<a href="">Contacts</a>
+</div>
+ </div>
+<div class="headersign">
+
+</div>
+<a href="account.html" class="account" >Account</a>
+
+  </header>
+
+  <main>
+    <div class="payment-container">
+      <h2>Choose Your Payment Method</h2>
+      <form action="confirmation.html" method="POST">
+         
+        <div class="payment-method">
+          <h3>Card Payment</h3>
+          <div class="form-group">
+            <label for="card-name">Cardholder Name:</label>
+            <input type="text" id="card-name" name="card-name" placeholder="Enter cardholder name" required>
+          </div>
+          <div class="form-group">
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" placeholder="Enter card number" required>
+          </div>
+          <div class="form-group">
+            <label for="expiry-date">Expiry Date:</label>
+            <input type="month" id="expiry-date" name="expiry-date" required>
+          </div>
+          <div class="form-group">
+            <label for="cvv">CVV:</label>
+            <input type="password" id="cvv" name="cvv" placeholder="Enter CVV" required>
+          </div>
+        </div>
+
+         
+        <div class="payment-method">
+          <h3>Mobile Payment</h3>
+          <div class="form-group">
+            <label for="mobile-number">Mobile Number:</label>
+            <input type="tel" id="mobile-number" name="mobile-number" placeholder="Enter your mobile number" required>
+          </div>
+          <div class="form-group">
+            <label for="mobile-provider">Mobile Provider:</label>
+            <select id="mobile-provider" name="mobile-provider" required>
+              <option value="mpesa">M-Pesa</option>
+              <option value="airtel-money">Airtel Money</option>
+              <option value="tigo-pesa">Tigo Pesa</option>
+            </select>
+          </div>
+        </div>
+
+         
+        <div class="payment-method">
+          <h3>PayPal</h3>
+          <p>Click the button below to pay with PayPal:</p>
+          <a href="https://www.paypal.com" target="_blank" class="paypal-button">Pay with PayPal</a>
+        </div>
+
+        
+        <div class="form-group">
+          <label for="amount">Amount to Pay:</label>
+          <input type="text" id="amount" name="amount" value="$200" readonly>
+        </div>
+
+         
+        <button type="submit" class="pay-button">Complete Payment</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+  <div class="footer-content">
+    <p>&copy; 2025 AIRLOVERS. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

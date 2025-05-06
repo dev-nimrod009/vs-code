@@ -13,73 +13,145 @@ Sorting/Filtering (Basic):,
 Sort by: Price 
 Optional Elements:
 
-5.  General UI Elements:
-
-Navigation:
-A simple header with a logo and a link to the homepage.
-
-Footer:
-Copyright information.
-Links to "About Us," "Contact Us," and a simplified "Privacy Policy."
-
-Consistent Styling:
-Use a consistent color scheme, typography, and button style throughout the app. 
-
-Mobile-First Design:
-Ensure the layout is clean and easy to use on small screens.
-Example Workflow:
-
-Homepage: User enters "New York" to "Los Angeles," selects a date, and clicks "Search."
-
-Search Results: User sees a list of 3-4 flights, each in a card format, and clicks "Select" on one.
 
 Booking Page: User enters their name, email, and phone number, and clicks "Confirm Booking."
 
 Confirmation Page: User sees their booking reference number and the flight details, and a message confirming their booking. -->
 
 
-<!doctype html>
+<!Doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>HomePage</title>
+<link rel="stylesheet" href="homepage.css"/>
+<link rel="stylesheet" href="header.css">
     
   </head>
   <body>
-<h1>my name is omosh</h1>
-    <div id="app"></div>
-    <script type="module"  >
-import { Clerk } from '@clerk/clerk-js';
+<header>
+ <div>
+<div class="homeheader">
+<p>AIRLOVERS</p>
+<a href="#">Home</a>
+<a href="">About</a>
+<a href="">Contacts</a>
+</div>
+ </div>
+<div class="headersign">
+<a href="signup.html">SignUp</a>
+<a href="signpage.html">SignIn</a>
+ 
+</div>
+<a href="account.html" class="account" >Account</a>
+</header>
+<div>
+<h1 class="attracth">The sky is never the limit again</h1>
+</div>
 
-const clerkPubKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
+<div class="popular-destinations">
+  <h2>Popular Destinations</h2>
+  <div class="destination-cards">
+    <div class="card">
+      <img src="paris.jpg" alt="Paris">
+      <p>Paris</p>
+    </div>
+    <div class="card">
+      <img src="newyork.jpg" alt="New York">
+      <p>New York</p>
+    </div>
+    <div class="card">
+      <img src="tokyo.jpg" alt="Tokyo">
+      <p>Tokyo</p>
+    </div>
+  </div>
+</div>
+<div class="box">
+ 
+<div class="box-box1">
+<p>Flight</p>
+<p>My Bookings</p>
+<p>Flight Status</p>
+</div>
+ <div class="box2">
+<div class="box-box2">
 
-const clerk = new Clerk(clerkPubKey);
+<div class="label-input-container">
+<label>From</label>
+<input type="text" placeholder="From"></input>
+</div>
 
-try {
-  await clerk.load();
+<div class="label-input-container">
+<label>To</label>
+<input type="text" placeholder="Destination"></input>
+</div>
+</div>
 
-  if (clerk.user) {
-    document.getElementById('app').innerHTML = `
-      <div id="user-button"></div>
-    `;
+<div class="box-box3">
 
-    const userButtonDiv = document.getElementById('user-button');
-    clerk.mountUserButton(userButtonDiv);
-  } else {
-    document.getElementById('app').innerHTML = `
-      <div id="sign-in"></div>
-    `;
+<div class="label-input-container">
+<label>Departure</label>
+ <input type="date" id="return" />
+</div>
 
-    const signInDiv = document.getElementById('sign-in');
-    clerk.mountSignIn(signInDiv);
-  }
-} catch (error) {
-  console.error('Error loading Clerk:', error);
-  document.getElementById('app').innerHTML = `
-    <div>Error loading authentication. Please try again later.</div>
-  `;
-}</script>
+<div class="label-input-container">
+<label>Return</label>
+ <input type="date" id="return" />
+</div>
+</div>
+
+<div class="box-box4">
+<div class="label-input-container">
+<label>No. of Passengers</label>
+<input type="number"></input>
+</div>
+
+<div class="label-input-container">
+<label>Passenger Class</label>
+ <select id="class">
+            <option>Economy</option>
+            <option>Business</option>
+            <option>First Class</option>
+          </select>
+ 
+</div>
+</div>
+</div>
+<
+<button>Book</button>
+</div>
+<div class="hero-section">
+  <p>Book your next adventure with AIRLOVERS</p>
+  <a href="flights.html"> <button>Explore Flights</button>
+  </a>
+</div>
+
+
+<div class="testimonials">
+  <h2>What Our Customers Say</h2>
+  <div class="testimonial-cards">
+    <div class="testimonial">
+      <p>"AIRLOVERS made my trip to Paris unforgettable. Highly recommend!"</p>
+      <span>- Francis franscisco</span>
+    </div>
+    <div class="testimonial">
+      <p>"The booking process was seamless and easy. Great service!"</p>
+      <span>- Bruno Fernades</span>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2025 AIRLOVERS. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
   </body>
 </html>
