@@ -1,0 +1,162 @@
+
+
+
+:root {
+    --primary-color: #ff4500; /* Bright orange for highlights */
+    --secondary-color: #2c3e50; /* Dark blue-gray for text */
+    --background-color: #f9f9f9; /* Light gray for background */
+    --border-color: #ddd; /* Light gray for borders */
+    --button-color: #28a745; /* Green for buttons */
+    --button-hover-color: #218838; /* Darker green for hover */
+    --font-family: 'Roboto', sans-serif; /* Modern and clean font */
+}
+
+ 
+input ,select{
+width: 250px;
+height:25px;
+
+
+}
+label{
+font-family: ;
+color: ;
+
+}
+.container{
+display:grid;
+width :400px;
+    border: 2px solid var(--border-color);
+margin:50px auto;
+ 
+justify-content:center;
+background-color: white;
+ padding: 30px;
+ border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.text{
+display:flex;
+justify-content:center;
+font-size:20px;
+ text-align: center;
+    color: var(--secondary-color);
+}
+.box-accountbox{
+gap:50px;
+display:flex;
+justify-content:center;
+}
+.or{
+display:flex;
+justify-content:center;
+
+    text-align: center;
+    font-size: 14px;
+    color: #7f8c8d; /* Light gray for subtlety */
+}
+
+.box-personalbox{
+display:grid;
+gap:10px;
+
+}
+.submit{
+position:relative;
+background-color: var(--button-color);
+ 
+ 
+right:0;
+gap:10px;
+margin:20px auto;
+border:none;
+border-radius:4px;
+cursor:pointer;
+ padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+ transition: background-color 0.3s ease;
+}
+
+
+
+
+
+body{
+font-family: var(--font-family);
+ margin: 0;
+    padding: 0;
+background-color: var(--background-color);
+display: grid;
+   color: var(--secondary-color);
+    align-items: center;
+    height: 100vh;
+
+
+}
+.box-accountbox button {
+    flex: 1;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.box-accountbox button:first-child {
+    background-color: #db4437; /* Google red */
+    color: white;
+}
+.box-accountbox button:last-child {
+    background-color: #333; /* GitHub black */
+    color: white;
+}
+.box-accountbox button:hover {
+    opacity: 0.9;
+}
+
+.box-personalbox label {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+.box-personalbox select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+.box-personalbox input:focus,
+.box-personalbox select:focus {
+    border-color: var(--primary-color); /* Highlight border on focus */
+    outline: none;
+}
+
+
+
+.submit:hover {
+    background-color: var(--button-hover-color); /* Darker green on hover */
+}
+
+.container p {
+    text-align: center;
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.container p a {
+    color: var(--primary-color); /* Bright orange for links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container p a:hover {
+    text-decoration: underline;
+}

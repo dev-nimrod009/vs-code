@@ -1,0 +1,105 @@
+
+
+
+
+:root {
+    --primary-color: #ff4500; /* Bright orange for highlights */
+    --secondary-color: #2c3e50; /* Dark blue-gray for text */
+    --background-color: #f9f9f9; /* Light gray for background */
+    --border-color: #ddd; /* Light gray for borders */
+    --button-color: #28a745; /* Green for buttons */
+    --button-hover-color: #218838; /* Darker green for hover */
+    --font-family: 'Roboto', sans-serif; /* Modern and clean font */
+}
+main{
+display:grid;
+position:relative;
+
+justify-content:center;
+margin:20px auto;
+ background-color: white;
+height:90vh;
+border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px;
+
+}
+.searchflight{
+position:relative;
+top:200px;
+background-color: var(--primary-color); 
+height:55px;
+width:50vw;
+border-radius:150px;
+}
+input{
+height:55px;
+border-radius:40px 0px 0px 40px;
+border:none;
+width:82%;
+font-size:20px;
+text-align:center;
+background-color:transparent;
+color: var(--secondary-color);
+     
+}
+button{
+height:55px;
+border-radius:0px 40px 40px 0px ;
+width: 110px;
+border:none;
+font-size:24px;
+font-weight: bold;
+
+background-color: var(--button-color); 
+color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+.searchflight button:hover {
+    background-color: var(--button-hover-color); /* Darker green on hover */
+}
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color); /* Light background for contrast */
+    color: var(--secondary-color); /* Dark blue-gray for text */
+    
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+media (max-width: 768px) {
+    main {
+        height: auto;
+        width: 95%;
+        padding: 15px;
+    }
+
+    .searchflight {
+        width: 90%;
+        height: 50px;
+    }
+
+    .searchflight input {
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .searchflight button {
+        height: 50px;
+        font-size: 16px;
+    }
+}

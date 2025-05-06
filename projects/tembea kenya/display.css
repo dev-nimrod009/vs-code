@@ -1,0 +1,52 @@
+header{
+height:90px;
+background-color: blue;
+
+}
+.headerdiv{
+background-color: transparent;
+color:red;
+height:90px;
+padding:20px;
+display:flex;
+align-items:flex-end;
+justify-content:flex-end;
+position:absolute;
+gap:10px;
+}
+a{
+color:red;
+spacing:15px;
+
+}
+.search{
+display:flex;
+ 
+justify-items:center;
+align-content:center;
+background-color: green;
+height:50px;
+width:150px;
+border-radius:20px ;
+ 
+position:absolute;
+}
+.search input{
+height:50px;
+width:80%;
+
+}
+.search button{
+height:50px;
+background-color:blue;
+
+}
+.searchbox{
+
+
+
+}
+.footer{
+height: 80px;
+
+}

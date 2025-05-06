@@ -1,0 +1,267 @@
+
+
+
+:root {
+    --global-padding: 20px;  
+  --primary-color: #ff4500;  
+    --secondary-color: #2c3e50;   
+    --background-color: #f9f9f9;
+    --border-color: #ddd;  
+    --button-color: #28a745;  
+    --button-hover-color: #218838;  
+    --font-family: 'Roboto', sans-serif;  
+}
+
+label {
+    font-size: 14px;  
+    font-weight: bold;  
+}
+
+input {
+    padding: 8px;  
+    border: 1px solid #ccc;  
+    border-radius: 4px;  
+ 
+}
+.label-input-container {
+    display: flex;
+  flex-direction: column;  
+    gap: 5px; 
+}
+
+ 
+
+.attracth{
+font-family: 'Arial Black', sans-serif;
+font-size:48px;
+ color: var(--primary-color);
+display:flex;
+justify-content:center ;
+position:relative;
+top:30px;
+
+text-align:center;
+margin:15px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section {
+  background-image: url('images/hero.jpg'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+.hero-section p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.hero-section button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-section button:hover {
+  background-color: var(--button-hover-color);
+}
+
+.popular-destinations {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.popular-destinations h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.destination-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  width: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: white;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card p {
+  font-size: 1rem;
+  padding: 10px;
+  color: var(--secondary-color);
+}
+.box{
+
+display:grid;
+ width:500px; 
+border:1.7px solid black;
+border-radius:8px;
+margin:20px auto;
+position:relative;
+top:20px;
+
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ border: 1px solid var(--border-color); 
+}
+.box2{
+display:grid;
+padding:25px;
+gap:25px;
+}
+.box-box1{
+display:flex;
+ 
+gap:35px;
+
+ 
+}
+.box-box2{
+display:flex;
+gap:50px;
+}
+.box-box3{
+display:flex;
+gap:85px;
+}
+.box-box4{
+display:flex;
+gap:50px;
+}
+button{
+position:relative;
+padding: 10px;
+width:120px;
+height:50px;
+bottom:10px;
+right: 10px;
+margin: 20px auto;
+ background-color: var(--button-color);
+ color: white;
+
+
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+font-family: var(--font-family);
+font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+
+button:hover {
+     background-color: var(--button-hover-color);
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+font-family: var(--font-family);
+color: var(--secondary-color);
+    background-color: var(--background-color);
+} 
+ 
+.label-input-container label {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+.label-input-container input, .label-input-container select {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: var(--font-family);
+    font-size: 14px;
+    width: 100%;
+}
+.testimonials {
+  background-color: var(--background-color);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.testimonial {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.testimonial p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.testimonial span {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .homeheader, .headersign {
+        flex: none;
+        justify-content: center;
+    }
+
+    .box {
+        width: 90%;
+        margin: 50px auto;
+    }
+
+    .attracth {
+        font-size: 28px;
+        top: 50px;
+    }
+}
