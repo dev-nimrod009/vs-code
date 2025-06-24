@@ -1,67 +1,199 @@
-        .homepage {
-            max-width: 1200px; 
-            margin: 0 auto;
-            padding: 20px;
-
-
+ 
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f7f9fa;
         }
-
-        .cards {
-            display: grid;
-            grid-template-columns: auto auto; 
-            gap: 90px 90px; 
+        .hero {
+            background: url('hero-image.jpg') center/cover no-repeat;
+            min-height: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+            position: relative;
         }
-
-        /* .cards > div { 
-            border: 1px solid #ddd;
-            padding: 15px;
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.35);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
             text-align: center;
-            box-sizing: border-box;  */
-        
-
-        .card-images img {
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .hero .cta-btn {
+            background: #ff6600;
+            color: #fff;
+            border: none;
+            padding: 12px 32px;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background 0.2s;
+        }
+        .hero .cta-btn:hover {
+            background: #e65c00;
+        }
+        .search-filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            padding: 30px 10px;
+            border-radius: 20px;
+            max-width: 700px;
+            margin: -60px auto 40px auto;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            position: relative;
+            z-index: 3;
+        }
+        .search-filter select, .search-filter input {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+        .search-filter button {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .search-filter button:hover {
+            background: #0056b3;
+        }
+        .featured-adventures {
+            max-width: 1100px;
+            margin: 0 auto 40px auto;
+            padding: 0 10px;
+        }
+        .featured-adventures h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #222;
+        }
+        .adventure-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+        }
+        .adventure-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            overflow: hidden;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.15s;
+        }
+        .adventure-card:hover {
+            transform: translateY(-5px) scale(1.02);
+        }
+        .adventure-card img {
             width: 100%;
-            height: auto;
-            display: block;
+            height: 180px;
+            object-fit: cover;
         }
-.masai-mara{ 
-grid-column:1;
-grid-row:1;
-}
-.diani{
-grid-column:2;
-grid-row:1;
-}
- .nakuru{
-grid-column:1;
-grid-row:2;
-}
-.nairobi-park{
-grid-column:2;
-grid-row:2;
-}
- .amboseli{
-grid-column:1;
-grid-row:3;
-}
-.mukurwe-thanga {
-grid-column:2;
-grid-row:3;
-}
- .mt-kenya {
-grid-column:1;
-grid-row:4;
-}
-.mombasa{
-grid-column:2;
-grid-row:4;
-}
-.masai-mara,.diani ,.nakuru, .nairobi-park, .amboseli, .mukurwe-thanga , .mt-kenya ,.mombasa{
-  
-            border: 6px solid #080303;
-            padding: 20px;
+        .adventure-card-content {
+            padding: 18px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .adventure-card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #1a3d2f;
+        }
+        .adventure-card-location {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .adventure-card-desc {
+            font-size: 0.98rem;
+            color: #444;
+            margin-bottom: 12px;
+            flex: 1;
+        }
+        .adventure-card-meta {
+            font-size: 0.92rem;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        .adventure-card-price {
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        .adventure-card button {
+            background: #ff6600;
+            color: #fff;
+            border: none;
+            padding: 8px 0;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .adventure-card button:hover {
+            background: #e65c00;
+        }
+        .newsletter {
+            background: #eaf6ff;
+            padding: 30px 10px;
             text-align: center;
-            box-sizing: border-box; 
-            width:100%;
-            height:fit-content
-}
+            border-radius: 16px;
+            max-width: 500px;
+            margin: 40px auto;
+        }
+        .newsletter input[type="email"] {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            width: 60%;
+            margin-right: 10px;
+        }
+        .newsletter button {
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            background: #007bff;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .newsletter button:hover {
+            background: #0056b3;
+        }
+        @media (max-width: 900px) {
+            .adventure-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            .adventure-card {
+                width: 90%;
+            }
+        }
+     

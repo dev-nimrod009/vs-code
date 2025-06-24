@@ -40,13 +40,13 @@ justify-content:center ;
 position:relative;
 top:30px;
 
-text-align:center;
+text-align:center; 
 margin:15px 0;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .hero-section {
-  background-image: url('images/hero.jpg'); /* Replace with your image */
+  background-image: url('images/hero.jpg');  
   background-size: cover;
   background-position: center;
   height: 50vh;

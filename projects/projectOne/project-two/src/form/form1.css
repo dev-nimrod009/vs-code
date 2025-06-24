@@ -1,0 +1,67 @@
+/* Container for the form */
+.form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 24px 32px;
+    background: #888181;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    font-family: Arial, sans-serif;
+}
+
+/* Each form group */
+.fname,
+.lname,
+.username,
+.pn,
+.pass {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+.Pn{
+display:flex;
+}
+/* Label styling */
+.form label {
+    margin-bottom: 6px;
+    color: #444;
+    font-weight: 500;
+display:grid;
+    justify-content:start;
+}
+
+/* Input styling */
+.form input[type="text"],
+.form input[type="number"],
+.form input[type="password"] {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.form input[type="text"]:focus,
+.form input[type="number"]:focus,
+.form input[type="password"]:focus {
+    border-color: #0078d7;
+    outline: none;
+}
+
+/* Optional: Add a submit button style if you add a button */
+.form button {
+    background: #0078d7;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    /* transition: background 0.2s; */
+    margin-top: 10px;
+}
+
+.form button:hover {
+    background: #005fa3;
+}

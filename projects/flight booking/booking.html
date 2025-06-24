@@ -1,10 +1,74 @@
-3.  Booking Page:
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Booking </title>
+  <link rel="stylesheet" href="booking.css">
+  <link rel="stylesheet" href="header.css">
+</head>
+<body>
+ <header>
+<div  >
+   <div class="homeheader">
+ 
+<p>AIRLOVERS</p>
+<a href="homepage.html">Home</a>
+<a href="">About</a>
+<a href="">Contacts</a>
+</div>
+ </div>
+<div class="headersign">
 
-Flight Details Summary:
-A recap of the selected flight (airline, times, price).
-Passenger Details Form:
-Full Name: Input field.
-Email: Input field (with validation).
-Phone Number: Input field (with validation).
+</div>
+<a href="account.html" class="account" >Account</a>
 
-Button: "Confirm Booking".
+  </header>
+
+<main>
+  <div class="booking-container">
+    <section class="flight-summary">
+      <h2>Flight Details Summary</h2>
+      <div class="flight-details">
+        <p><strong>Airline:</strong> AirLovers Airlines</p>
+        <p><strong>From:</strong> New York</p>
+        <p><strong>To:</strong> Los Angeles</p>
+        <p><strong>Departure:</strong> 10:00 AM</p>
+        <p><strong>Arrival:</strong> 1:00 PM</p>
+        <p><strong>Price:</strong> $200</p>
+      </div>
+    </section>
+
+    <section class="passenger-details">
+      <h2>Passenger Details</h2>
+      <form action="payment.html" method="POST">
+        <div class="form-group">
+          <label for="full-name">Full Name:</label>
+          <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        </div>
+        <button type="submit" class="confirm-button">Confirm Booking</button>
+      </form>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2025 AIRLOVERS. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

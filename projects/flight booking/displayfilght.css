@@ -3,13 +3,13 @@
 
 
 :root {
-    --primary-color: #ff4500; /* Bright orange for highlights */
-    --secondary-color: #2c3e50; /* Dark blue-gray for text */
-    --background-color: #f9f9f9; /* Light gray for background */
-    --border-color: #ddd; /* Light gray for borders */
-    --button-color: #28a745; /* Green for buttons */
-    --button-hover-color: #218838; /* Darker green for hover */
-    --font-family: 'Roboto', sans-serif; /* Modern and clean font */
+    --primary-color: #ff4500;  
+    --secondary-color: #2c3e50;  
+    --background-color: #f9f9f9;  
+    --border-color: #ddd;     
+    --button-color: #28a745;  
+    --button-hover-color: #218838;  /
+    --font-family: 'Roboto', sans-serif;  
 }
 main{
 display:grid;
@@ -20,7 +20,7 @@ margin:20px auto;
  background-color: white;
 height:90vh;
 border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
     padding: 20px;
 
 }
@@ -67,18 +67,18 @@ color: white;
 
 
 .searchflight button:hover {
-    background-color: var(--button-hover-color); /* Darker green on hover */
+    background-color: var(--button-hover-color);  
 }
 body {
     font-family: var(--font-family);
     margin: 0;
     padding: 0;
-    background-color: var(--background-color); /* Light background for contrast */
-    color: var(--secondary-color); /* Dark blue-gray for text */
+    background-color: var(--background-color);  
+    color: var(--secondary-color); 
     
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;  
 }
 
 media (max-width: 768px) {
