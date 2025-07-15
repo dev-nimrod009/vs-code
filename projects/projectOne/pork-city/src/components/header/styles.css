@@ -1,0 +1,22 @@
+.header{
+background-color:red;
+display:flex;
+align-items:center;
+height:100px;
+
+padding:40;
+margin:0;
+/* font-weight:700;
+font-size:60px;
+font-family: Helvetica, Arial; */
+}
+.hotelLogo{
+margin:0;
+}
+.hotelName{
+font-weight:700;
+font-size:60px;
+font-family: Helvetica, Arial;
+margin:auto;
+
+}

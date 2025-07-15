@@ -1,0 +1,15 @@
+.navbar{
+    display:flex;
+    gap:50px;
+    font-size:40px;
+    justify-content:space-around;
+    
+}
+button {
+    padding: 0px 0px;
+    font-size: 50px;
+    background: transparent;
+    color: black;
+    border: none;
+    cursor: pointer;
+}

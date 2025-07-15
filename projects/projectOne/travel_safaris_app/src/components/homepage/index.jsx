@@ -1,0 +1,96 @@
+import React from 'react'
+import './styles.css'
+export default function HomePage() {
+  return (
+    <div>
+     
+
+   
+    <div class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Explore the Hidden Wonders of Kenya</h1>
+            <p>Find your next adventure today</p>
+            <button class="cta-btn">Find Your Adventure</button>
+        </div>
+    </div>
+
+     
+    <form class="search-filter">
+        <select name="activity">
+            <option value="">Activity Type</option>
+            <option>Hiking</option>
+            <option>Kayaking</option>
+            <option>Climbing</option>
+            <option>Safari</option>
+        </select>
+        <input type="text" name="location" placeholder="Location"/>
+        <select name="duration">
+            <option value="">Duration</option>
+            <option>1 day</option>
+            <option>2-3 days</option>
+            <option>1 week+</option>
+        </select>
+        <select name="difficulty">
+            <option value="">Difficulty</option>
+            <option>Easy</option>
+            <option>Moderate</option>
+            <option>Challenging</option>
+        </select>
+        <button type="submit">Search</button>
+    </form>
+
+ 
+    <section class="featured-adventures">
+        <h2>Featured Adventures</h2>
+        <div class="adventure-cards">
+            <div class="adventure-card">
+                <img src="images/hiking-mt-kenya.jpg" alt="Hiking Mt. Kenya"/>
+                <div class="adventure-card-content">
+                    <div class="adventure-card-title">Hiking Mt. Kenya</div>
+                    <div class="adventure-card-location">Mt. Kenya National Park</div>
+                    <div class="adventure-card-desc">Experience the thrill of summiting Kenya's highest peak with expert guides.</div>
+                    <div class="adventure-card-meta">Duration: 3 Days | Difficulty: Challenging</div>
+                    <div class="adventure-card-price">From $350</div>
+                    <button>View Details</button>
+                </div>
+            </div>
+            <div class="adventure-card">
+                <img src="images/maasai-mara-safari.jpg" alt="Maasai Mara Safari"/>
+                <div class="adventure-card-content">
+                    <div class="adventure-card-title">Maasai Mara Safari</div>
+                    <div class="adventure-card-location">Maasai Mara Reserve</div>
+                    <div class="adventure-card-desc">Witness the Great Migration and explore the savannah with local experts.</div>
+                    <div class="adventure-card-meta">Duration: 2 Days | Difficulty: Easy</div>
+                    <div class="adventure-card-price">From $500</div>
+                    <button>View Details</button>
+                </div>
+            </div>
+            <div class="adventure-card">
+                <img src="images/kayaking-lake-naivasha.jpg" alt="Kayaking Lake Naivasha"/>
+                <div class="adventure-card-content">
+                    <div class="adventure-card-title">Kayaking Lake Naivasha</div>
+                    <div class="adventure-card-location">Lake Naivasha</div>
+                    <div class="adventure-card-desc">Paddle through serene waters and spot hippos and birds in their natural habitat.</div>
+                    <div class="adventure-card-meta">Duration: 1 Day | Difficulty: Moderate</div>
+                    <div class="adventure-card-price">From $120</div>
+                    <button>View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+    <div class="newsletter">
+        <h2>Subscribe to our Newsletter</h2>
+        <p>Get the latest adventures and offers straight to your inbox.</p>
+        <form>
+            <input type="email" placeholder="Your email address" required/>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+
+ 
+    </div>
+  )
+}

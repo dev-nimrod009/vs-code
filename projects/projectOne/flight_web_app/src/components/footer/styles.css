@@ -1,0 +1,23 @@
+.footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 5px;
+    text-align: center;
+    height:100%;
+    
+}
+
+.footer__links {
+    margin-top: 10px;
+}
+
+.footer__links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9rem;
+}
+
+.footer__links a:hover {
+    text-decoration: underline;
+}

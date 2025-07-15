@@ -1,0 +1,71 @@
+.weather-box {
+    place-self: center;
+    padding: 35px;
+    border-radius: 10px;
+    background: rgb(228, 225, 225);
+    border: 1.5px solid rgb(11, 129, 40);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 40px;
+
+    &__search-box {
+        display: flex;
+
+
+        input {
+            background: transparent;
+            padding: 10px;
+            border-radius: 26px;
+            outline: none;
+            border: none;
+            height: 50px;
+            font-size: 19px;
+            align-items: center;
+            text-align: center;
+            border: 1.2px solid black;
+        }
+
+        img {
+            width: 50px;
+            border-radius: 50%;
+            padding: 4px;
+            cursor: pointer;
+        }
+    }
+
+    &__data {
+        display: grid;
+        justify-items: center;
+        gap: 20px;
+
+
+        .temp {
+            font-size: 35px;
+        }
+
+        .location {
+            font-size: 30px;
+        }
+
+        &__details {
+            display: flex;
+            gap: 4rem;
+
+
+            &__humidity,
+            &__wind {
+                font-size: 16px;
+
+
+
+                img {
+                    width: 50px;
+                    border-radius: 50%;
+
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,144 @@
+.foodServed {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 2px;
+    gap: 40px;
+}
+
+li {
+
+    background-color: rgb(233, 233, 241);
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 2px;
+    border-radius: 2px;
+    gap: 20px;
+
+}
+
+.breakfast__items {
+    display: grid;
+
+
+}
+
+/* .breakfast,
+.foods,
+.dessert */
+img {
+    width: 240px;
+    height: 240px;
+    border-radius: 7px;
+}
+
+.breakfast__name {
+    font-size: 25px;
+}
+
+.breakfast__description {
+    font-size: 15px;
+}
+
+
+
+
+
+
+.breakfast__ordering {
+    display: flex;
+    gap: 20px;
+}
+
+
+
+.selecting {
+    border: 0.6px solid black;
+    cursor: pointer;
+    border-radius: 10px;
+    color: black;
+    font-size: 18px;
+
+}
+
+.orderButton {
+    position: absolute;
+    background: transparent;
+    font-size: 26px;
+    border: 1px solid black;
+    border-radius: 30px 30px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.my-orders-invisible {
+    opacity: 0;
+    transition: opacity 0.5s, height 0.5s;
+    height: 0;
+    position: relative;
+    gap: 10px;
+    bottom: -4.2rem;
+    left: 1.2em;
+    border-radius: 5px;
+
+    width: 40%;
+
+    background-color: red;
+}
+
+.my-orders {
+    position: relative;
+    gap: 10px;
+    bottom: -4.2rem;
+    left: 1.2em;
+    border-radius: 5px;
+    height: 70%;
+    width: 40%;
+    opacity: 1;
+    transition: opacity 0.5s, height 0.5s;
+    background-color: red;
+}
+
+.my-orders h3 {
+    font-weight: 100;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.my-orders li {
+    border-bottom: 1px solid black;
+    padding: 0px 10px;
+    background: crimson;
+    font-size: 40px;
+    font-weight: 200;
+}
+
+.order-details {
+    padding: 10px;
+}
+
+.place-order {
+    display: flex;
+    justify-content: Space-around;
+
+
+    h3 {
+        font-size: 25px;
+    }
+
+    button {
+        font-size: 30px;
+    }
+}
