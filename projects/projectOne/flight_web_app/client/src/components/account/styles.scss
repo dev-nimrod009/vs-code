@@ -1,0 +1,112 @@
+.left-nav {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 20px;
+    position: sticky;
+    border-right: 2px solid var(--border-color);
+    padding: 15px;
+    font-size: 22px;
+    margin-left: 20px;
+    float: left;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main_body {
+    display: grid;
+
+    gap: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+
+
+    &__email_details {
+        &__mini_email {
+
+            button {
+                background-color: var(--button-color);
+                color: white;
+                padding: 10px;
+                font-size: 16px;
+                font-weight: bold;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                text-align: center;
+                height: fit-content;
+                width: fit-content;
+
+                &:hover {
+                    background-color: var(--button-hover-color);
+                }
+            }
+        }
+    }
+
+    &__profile_details,
+    &__email_details,
+    &__phone_details,
+    &__connected_accounts {
+        display: flex;
+        gap: 55px;
+        border-bottom: 0.1px solid black;
+        height: 100%;
+
+
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+
+        p {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        &__min-profile,
+        &__mini-email,
+        &__mini-number,
+        &__mini-accounts {
+
+            gap: 10px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            height: fit-content;
+        }
+
+
+    }
+
+}
+
+
+
+.left-nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.left-nav a.active {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+
+.left-nav a:hover {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}

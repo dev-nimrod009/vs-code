@@ -1,0 +1,72 @@
+ .flight {
+     h1 {
+         font-size: 2rem;
+         margin-bottom: 20px;
+         color: #2c3e50;
+     }
+
+     &__cards {
+         display: flex;
+
+         gap: 10px;
+         justify-content: center;
+
+
+         ul {
+             display: grid;
+             grid-template-columns: repeat(4, 1fr);
+             gap: 30px;
+             justify-items: center;
+
+             list-style-type: none;
+
+
+             li {
+                 background-color: white;
+                 border: 1px solid #ddd;
+                 border-radius: 8px;
+                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                 padding: 10px;
+                 width: 250px;
+                 text-align: left;
+
+                 img {
+                     width: 100px;
+                     height: auto;
+                     margin-bottom: 10px;
+                 }
+
+                 h3 {
+                     color: #ff4500;
+                     margin-bottom: 10px;
+                 }
+
+                 p {
+                     margin: 5px 0;
+                     font-size: 14px;
+                     color: #2c3e50;
+                 }
+
+                 button {
+                     display: inline-block;
+                     background-color: #28a745;
+                     color: white;
+                     text-decoration: none;
+                     padding: 10px 20px;
+                     border-radius: 4px;
+                     font-size: 14px;
+                     font-weight: bold;
+                     text-align: center;
+                     transition: background-color 0.3s ease;
+                     margin-top: 10px;
+
+
+                     &:hover {
+                         background-color: #218838;
+                     }
+                 }
+             }
+         }
+     }
+
+ }

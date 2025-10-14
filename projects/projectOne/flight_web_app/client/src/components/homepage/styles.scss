@@ -1,0 +1,214 @@
+.homepage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+    &__top {
+        h1 {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 48px;
+            color: var(--primary-color);
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 30px;
+
+            text-align: center;
+            margin: 15px 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    &__popular_destinations {
+        text-align: center;
+        padding: 40px 20px;
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        &__cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+
+            &__card {
+                width: 200px;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                background-color: white;
+
+                img {
+                    width: 100%;
+                    height: 150px;
+                    object-fit: cover;
+                }
+
+                p {
+                    font-size: 1rem;
+                    padding: 10px;
+                    color: var(--secondary-color);
+                }
+
+            }
+        }
+    }
+
+    &__box {
+        display: grid;
+        width: 500px;
+
+        border-radius: 8px;
+        margin: 20px auto;
+        position: relative;
+        top: 20px;
+
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border: 1px solid var(--border-color);
+
+        &__box1 {
+            display: flex;
+            padding: 0px 20px;
+            gap: 35px;
+        }
+
+        &__box2 {
+            display: grid;
+            padding: 25px;
+            gap: 25px;
+
+            &__box2-1 {
+                display: flex;
+                gap: 50px;
+            }
+
+            &__box3 {
+                display: flex;
+                gap: 85px;
+
+            }
+
+            &__box4 {
+                display: flex;
+                gap: 50px;
+            }
+        }
+
+        button {
+
+            margin: 50px auto;
+            border-radius: 8px;
+            padding: 8px 20px;
+        }
+    }
+
+    &__hero_section {
+        background-image: url('images/hero.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        padding: 10px;
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 10px;
+            border: none;
+            border-radius: 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: var(--button-hover-color);
+            }
+        }
+
+    }
+
+    &__testimonials {
+        background-color: var(--background-color);
+        padding: 40px 20px;
+        text-align: center;
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        &__cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+
+            li {
+                background-color: white;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                width: 300px;
+
+                p {
+                    font-size: 1rem;
+                    margin-bottom: 10px;
+                }
+
+                span {
+                    font-size: 0.9rem;
+                    color: var(--secondary-color);
+                }
+            }
+
+
+        }
+
+    }
+
+}
+
+
+
+.label-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    label {
+        font-weight: bold;
+        font-size: 14px;
+
+        color: var(--secondary-color);
+    }
+
+    input,
+    select {
+        padding: 10px;
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        font-family: var(--font-family);
+        font-size: 14px;
+        width: 100%;
+    }
+
+    input {
+        padding: 8px;
+        border: 1px solid #0f0808;
+        border-radius: 4px;
+
+    }
+}

@@ -1,0 +1,44 @@
+1. Database Models
+   Flight Model: airline, from, to, departure, arrival, price, flight ID.
+   Booking Model: user ID, flight ID, passenger info, booking date, reference.
+   User Model: add isAdmin boolean for admin users.
+2. Backend API Endpoints
+   Flights
+   POST /api/flights — Add flight (admin only)
+   GET /api/flights — List flights
+   PUT /api/flights/:id — Edit flight (admin only)
+   DELETE /api/flights/:id — Delete flight (admin only)
+   Bookings
+   POST /api/bookings — Create booking
+   GET /api/bookings — List all bookings (admin only)
+   GET /api/bookings/:userId — List user’s bookings
+   Users
+   GET /api/users — List users (admin only)
+   DELETE /api/users/:id — Delete user (admin only)
+   Auth
+   POST /api/login — User/admin login
+   POST /api/register — User registration
+3. Frontend Pages
+   User Side
+   Flights list, booking form, confirmation page, booking history.
+   Admin Side
+   Admin login, dashboard:
+   Add/edit/delete flights
+   View/manage bookings
+   View/manage users
+4. Admin Authentication
+   Add admin login page.
+   Protect admin routes (frontend and backend) using isAdmin field.
+5. Landing Page
+   Add background image/video via CSS.
+6. Finish & Polish
+   Validate forms.
+   Add error/success messages.
+   Test all flows (user and admin).
+   Deploy backend and frontend.
+   Summary:
+
+Create models and endpoints for flights, bookings, users.
+Build user and admin pages.
+Add authentication and access control.
+Polish UI and test.
