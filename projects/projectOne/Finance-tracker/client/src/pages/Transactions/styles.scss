@@ -1,0 +1,225 @@
+.transactions__container {
+    display: grid;
+
+    gap: 15px;
+    margin-bottom: 30px;
+    align-items: center;
+
+
+    &__hero-section {
+
+        display: flex;
+
+        gap: 15px;
+        margin-bottom: 30px;
+        align-items: center;
+
+        p {
+            font-size: 30px;
+            font-family: Tahoma, sans-serif;
+        }
+
+        &__action {
+
+
+            input {
+                flex-grow: 1;
+                max-width: 300px;
+                padding: 10px 15px;
+                border: 1px solid #ccc;
+                border: radius 8px;
+                font-size: 1em;
+            }
+
+            button {
+                padding: 10px 20px;
+                border: none;
+                border-radius: 8px;
+                font-size: 1em;
+                cursor: pointor;
+
+
+
+                &:first-child {
+                    background-color: var(--secondary-color);
+                    color: white;
+
+                    &:hover {
+                        background-color: #5a6268;
+                    }
+                }
+
+                &:last-child {
+                    background-color: var(--primary-color);
+                    color: white;
+
+                    &:hover {
+                        background-color: #0056b3;
+
+                    }
+                }
+            }
+
+        }
+    }
+
+    &__main-transactions {
+        background-color: #fff;
+        border: 1 px solid var(--border-color);
+
+        border-radius: 10px;
+        overflow-x: auto;
+        box-shadow: 0 2px rgba(0, 0, 0, 0.05);
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+
+            th,
+            td {
+
+                text-align: left;
+                padding: 12px 15px;
+                border-bottom: 1px solid #eee;
+
+
+            }
+
+            th {
+                background-color: #f8f8f8;
+                font-weight: 600;
+                color: #555;
+                font-size: 0.95em;
+
+            }
+
+            tr:last-child td {
+                border-bottom: none;
+            }
+
+            tbody tr:hover {
+                background-color: #f5f5f5;
+            }
+
+            .text-income {
+                color: var(--income-color);
+                font-weight: 500;
+            }
+
+            .text-expense {
+                color: var(--expense-color);
+                font-weight: 500;
+            }
+        }
+
+        .no-transact {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: italic;
+        }
+    }
+
+    &__addTransactions {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+
+        &__form-modal {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 90%;
+
+            h2 {
+                text-align: center;
+                margin-bottom: 25px;
+                color: #333;
+                font-size: 1.8em;
+
+            }
+
+            .addTransact {
+                display: grid;
+                gap: 1.2em;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .formGroup {
+                display: flex;
+                flex-direction: column;
+
+                label {
+                    font-size: 1em;
+                    margin-bottom: 5px;
+                    color: var(--default-text-color);
+                }
+
+                input[type="date"],
+                input[type="text"],
+                input[type="number"],
+                select {
+                    padding: 10px;
+                    width: 100%;
+                    box-sizing: border-box;
+                    font-size: 18px;
+                    border: 1px solid #ccc;
+                    border-radius: 6px;
+
+                    &:focus {
+                        border-color: var(--primary-color);
+                        outline: none;
+                        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+                    }
+                }
+            }
+        }
+
+        .formAction {
+
+            grid-column: 1/-1;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+
+            button {
+                padding: 10px 25px;
+                border: none;
+                border-radius: 8px;
+                font-size: 1em;
+                cursor: pointor;
+
+                &:first-child {
+                    background-color: var(--income-color);
+                    color: white;
+
+                    &:hover {
+                        background-color: #218838;
+                    }
+                }
+
+                &:last-child {
+                    background-color: var(--background-color-hover);
+                    color: #555;
+
+                    &:hover {
+                        background-color: var(--border-color);
+                    }
+                }
+            }
+
+        }
+    }
+
+}

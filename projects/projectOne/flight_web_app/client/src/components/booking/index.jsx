@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './styles.scss'
 import { useLocation, useNavigate } from 'react-router-dom'
-
+import axios from 'axios'
 
 
 export default function Booking() {
@@ -18,10 +18,21 @@ export default function Booking() {
     setPersonalDetails({ ...personalDetails, [event.target.name]: event.target.value })
   }
 
-  const handleConfirm = (e) => {
+  const handleConfirm = async (e) => {
     e.preventDefault()
-    navigate('/confirmpage', { state: { flightDetails, personalDetails } }
-    )
+    try {
+      await axios.post('http://localhost:3001/userBooking', {
+        flightDetails, personalDetails
+      })
+
+      navigate('/confirmpage', { state: { flightDetails, personalDetails } })
+
+    } catch (error) {
+      console.log(error)
+    }
+
+
+
   }
   return (
 
@@ -29,7 +40,7 @@ export default function Booking() {
       <section className="booking_container__flight_summary">
         <h2>Flight Details Summary</h2>
         <div className="booking_container__flight_summary__flight_details">
-          <p><strong>Airline:</strong> AirLovers Airlines</p>
+          <p><strong>Airline:</strong>{flightDetails.airlineName}  </p>
           <p><strong>From:</strong> {flightDetails.from}</p>
           <p><strong>To:</strong> {flightDetails.to}</p>
           <p><strong>Departure:</strong>{flightDetails.departure}</p>

@@ -1,144 +1,212 @@
-.foodServed {
+body {
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    font-size: 40px;
-    font-weight: 500;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.foodServed {
+    padding: 20px;
 }
 
 
 ul {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 2px;
-    gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    padding: 0;
+    gap: 20px;
+    list-style: none;
 }
 
 li {
 
-    background-color: rgb(233, 233, 241);
+    background-color: #fff;
     display: flex;
-    align-items: center;
-    justify-items: center;
+    text-align: center;
+    justify-content: space-between;
     flex-direction: column;
-    width: 100%;
-    padding: 2px;
-    border-radius: 2px;
-    gap: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 
+
+}
+
+li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .breakfast__items {
-    display: grid;
+    padding: 15px;
 
 
 }
 
-/* .breakfast,
-.foods,
-.dessert */
+
 img {
-    width: 240px;
-    height: 240px;
+    width: 100%;
+    height: 200px;
     border-radius: 7px;
+    object-fit: cover;
 }
 
 .breakfast__name {
-    font-size: 25px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 10px 0;
 }
 
 .breakfast__description {
-    font-size: 15px;
+    font-size: 0.9rem;
+    color: #666;
 }
 
-
-
-
-
+.breakFast__price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #007bff;
+}
 
 .breakfast__ordering {
     display: flex;
-    gap: 20px;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
 }
 
+.select-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
+.select-button:hover {
+    background-color: #0056b3;
+}
 
-.selecting {
+.selected-button .selected {
+    background-color: ##28a745;
+}
+
+.selected-button.selected:hover {
+    background-color: #218838;
+}
+
+/* .selecting {
     border: 0.6px solid black;
     cursor: pointer;
     border-radius: 10px;
     color: black;
     font-size: 18px;
 
+} */
+.order-details {
+    position: fixed;
+    bottom: right;
+    right: 20px;
 }
 
 .orderButton {
-    position: absolute;
-    background: transparent;
-    font-size: 26px;
-    border: 1px solid black;
-    border-radius: 30px 30px;
-    padding: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 25px;
+    font-size: 1.25rem;
+    font-weight: bold;
     cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.5s ease;
+
 }
 
-.my-orders-invisible {
+.orderButton:hover {
+    background-color: #c82333;
+}
+
+.order-modal {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease opacity 0.5s ease;
+}
+
+.order-modal.hide {
+    transform: scale(0);
     opacity: 0;
-    transition: opacity 0.5s, height 0.5s;
-    height: 0;
-    position: relative;
-    gap: 10px;
-    bottom: -4.2rem;
-    left: 1.2em;
-    border-radius: 5px;
-
-    width: 40%;
-
-    background-color: red;
 }
 
-.my-orders {
-    position: relative;
-    gap: 10px;
-    bottom: -4.2rem;
-    left: 1.2em;
-    border-radius: 5px;
-    height: 70%;
-    width: 40%;
+.order-modal.my-orders {
+
+    transform: scale(1);
     opacity: 1;
-    transition: opacity 0.5s, height 0.5s;
-    background-color: red;
+
 }
 
-.my-orders h3 {
-    font-weight: 100;
-    font-size: 20px;
+.order-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.order-items {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+
 }
 
-.my-orders li {
-    border-bottom: 1px solid black;
-    padding: 0px 10px;
-    background: crimson;
-    font-size: 40px;
-    font-weight: 200;
+.order-items:first-child {
+    font-size: 1rem;
 }
 
-.order-details {
-    padding: 10px;
+.order-items:last-child {
+    font-weight: bold;
+
 }
+
+
+
 
 .place-order {
     display: flex;
-    justify-content: Space-around;
+    justify-content: Space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px solid #333;
+
 
 
     h3 {
-        font-size: 25px;
+        font-size: 1.25rem;
     }
 
     button {
-        font-size: 30px;
+        font-size: 1rem;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+
     }
 }

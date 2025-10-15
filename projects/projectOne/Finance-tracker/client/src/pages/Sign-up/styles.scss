@@ -1,0 +1,59 @@
+// body {
+//     display: grid;
+//     margin: 20px auto;
+//     justify-content: center;
+
+
+// }
+
+.sign-up__container {
+    display: grid;
+    width: fit-content;
+    border-radius: 8px;
+    border: 1px solid black;
+    padding: 7px 15px;
+
+    background: rgb(247, 243, 243);
+
+
+
+    &__create-account {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        label {
+            color: cadetblue;
+            font-size: 21px;
+            padding-top: 10px;
+        }
+
+        input {
+            font-size: 15px;
+            padding: 6px;
+
+            box-shadow: inset 0px 0px 0px 0px rgba(247, 243, 243, 0.904);
+            height: 2em;
+            border-radius: 10px;
+
+        }
+    }
+
+
+    &__google {
+        display: grid;
+        justify-content: center;
+
+        p {
+            font-size: 22px;
+            color: rgb(74, 139, 141);
+
+        }
+
+        button {
+            padding: 5px;
+            font-size: 20px;
+            color: rgb(12, 184, 12)
+        }
+    }
+}

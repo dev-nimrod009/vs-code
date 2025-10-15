@@ -1,158 +1,103 @@
-import React, { useState } from 'react'
-import { data } from './kitchen'
-import './styles.css'
+import React, { useState } from "react";
+import { data } from "./kitchen";
+import "./styles.css";
+
+const MenuList = ({ items, selectedItems, onSelect }) => {
+    return (
+        <ul>
+            {data.breakfast.map((item, i) => (
+                <li key={i}>
+                    <div className="breakfast__items">
+                        <img
+                            alt={item.name}
+                            src={item.image}
+                            className="breakfast__image"
+                        />
+
+                        <h4 className="breakfast__name"> {item.name}</h4>
+                        <p className="breakfast__description"> {item.description}</p>
+                    </div>
+
+                    <div className="breakfast__ordering">
+                        <span className="breakfast__price">${item.price.toFixed(2)}</span>
+                        <button
+                            className={`select-button ${selectedItems.some((i) => i.id === item.id) ? "selected" : ""
+                                }`}
+                            onClick={() => onSelect(item)}
+                        >
+                            {selectedItems.some((i) => i.id === item.id)
+                                ? "Selected"
+                                : "Select"}
+                        </button>
+                    </div>
+                </li>
+            ))}
+        </ul>
+    );
+};
 
 function Breakfast({ category }) {
-
     const [selectedItems, setSelectedItems] = useState([]);
     const handleSelect = (item) => {
-        if (selectedItems.includes(item)) {
-            setSelectedItems(selectedItems.filter((i) => i.id !== item.id));
-        } else {
-            setSelectedItems([...selectedItems, item]);
-        }
-
+        setSelectedItems((prevItems) => {
+            if (prevItems.some((i) => i.id === item.id)) {
+                return prevItems.filter((i) => i.id !== item.id);
+            } else {
+                return [...prevItems, item];
+            }
+        });
     };
 
-    const [showDiv, setShowDiv] = useState(false)
-    const displayOrder = () => {
-        setShowDiv(!showDiv)
-    }
+    const [showDiv, setShowDiv] = useState(false);
 
-    const totalPrice = Object.values(selectedItems).reduce((acc, item) =>
-        acc + item.price, 0).toFixed(2)
+    const totalPrice = selectedItems
+        .reduce((acc, item) => acc + item.price, 0)
+        .toFixed(2);
+
+    const getCategoryData = () => {
+        switch (category) {
+            case "breakfast":
+                return data.breakfast;
+            case "foodAndDrinks":
+                return data.foods;
+            case "desserts":
+                return data.dessert;
+            default:
+                return [];
+        }
+    };
     return (
-
         <div className="foodServed">
-            {category === 'breakfast' && (
-                <div className="breakfast" id="breakfast">
-
-                    <ul >
-                        {
-                            data.breakfast.map((item, i) => (<li key={i}>
-                                <span className="breakfast__items">
-                                    <span className="breakfast__image">
-                                        <img alt="photos" src={item.image} />
-                                    </span>
-                                    <span className="breakfast__name"> {item.name}</span>
-                                    <span className="breakfast__description"> {item.description}</span>
-                                </span>
-
-                                <span className="breakfast__ordering">
-                                    <span className="breakfast__price">${item.price}</span>
-                                    <button className="selecting"
-                                        style={{
-                                            backgroundColor: selectedItems.includes(item) ? 'blue' : ' ',
-                                            color: selectedItems.includes(item) ? 'white' : '',
-
-                                        }}
-                                        onClick={() => handleSelect(item)}
-                                    >
-                                        {selectedItems.includes(item) ? 'Selected' : 'Select'}</button>
-                                </span>
-                            </li>
-                            ))
-                        }
-
-                    </ul>
-
-                </div>
-            )}
-            {category === 'foodsAndDrinks' && (
-                <div className="breakfast" id="foods">
-
-                    <ul >
-                        {
-                            data.foods.map((item, i) => (<li key={i}>
-                                <span className="breakfast__items">
-
-                                    <img className="breakfast__image" alt="photos" src={item.image} />
-
-                                    <p className="breakfast__name"> {item.name}</p>
-                                    <p className="breakfast__description"> {item.description}</p>
-                                </span>
-
-                                <span className="breakfast__ordering">
-                                    <span className="breakfast__price">${item.price}</span>
-                                    <button className="selecting"
-                                        style={{
-                                            backgroundColor: selectedItems.includes(item) ? 'blue' : ' ',
-                                            color: selectedItems.includes(item) ? 'white' : '',
-
-                                        }}
-                                        onClick={() => handleSelect(item)}
-                                    >
-                                        {selectedItems.includes(item) ? 'Selected' : 'Select'}</button>
-                                </span>
-                            </li>
-                            ))
-                        }
-
-                    </ul>
-
-                </div>
-            )}
-            {category === 'desserts' && (
-                <div className="breakfast" id="dessert">
-
-                    <ul >
-                        {
-                            data.dessert.map((item, i) => (<li key={i}>
-                                <span className="breakfast__items">
-                                    <span className="breakfast__image">
-                                        <img alt="photos" src={item.image} />
-                                    </span>
-                                    <span className="breakfast__name"> {item.name}</span>
-                                    <span className="breakfast__description"> {item.description}</span>
-                                </span>
-
-                                <span className="breakfast__ordering">
-                                    <span className="breakfast__price">${item.price}</span>
-                                    <button className="selecting"
-                                        style={{
-                                            backgroundColor: selectedItems.includes(item) ? 'blue' : ' ',
-                                            color: selectedItems.includes(item) ? 'white' : '',
-
-                                        }}
-                                        onClick={() => handleSelect(item)}
-                                    >
-                                        {selectedItems.includes(item) ? 'Selected' : 'Select'}</button>
-                                </span>
-                            </li>
-                            ))
-                        }
-
-                    </ul>
-
-                </div>
-            )}
-
-
+            <div className="breakfast">
+                <MenuList
+                    items={getCategoryData()}
+                    selectedItems={selectedItems}
+                    onSelect={handleSelect}
+                />
+            </div>
 
             <div className="order-details">
-
-                <button className="orderButton" onClick={displayOrder} >ORDER</button>
-                <div className={showDiv ? 'my-orders' : 'my-orders-invisible'}  >
-                    <h3>ORDERS for table 4</h3>
-                    <ul>{selectedItems.map((item, i) =>
-                        <li key={i} >
-                            <span>{item.name}</span>
-                            <span>{item.price}</span>
-
-                        </li>)}
-                        <div className="place-order">
-
-                            <h3>Amount =${totalPrice} </h3>
-                            <button>Place Order</button>
-                        </div>
+                <button className="orderButton" onClick={() => setShowDiv(!showDiv)}>
+                    ORDER({selectedItems.length})
+                </button>
+                <div className={`order-modal ${showDiv ? "my-orders" : "hide"}`}>
+                    <h3>ORDERS for table 4 </h3>
+                    <ul className="order-list">
+                        {selectedItems.map((item, i) => (
+                            <li key={i} className="order-items">
+                                <span>{item.name}</span>
+                                <span>{item.price.toFixed(2)}</span>
+                            </li>
+                        ))}
                     </ul>
-
-
-
+                    <div className="place-order">
+                        <h3>Amount =${totalPrice} </h3>
+                        <button>Place Order</button>
+                    </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default Breakfast
+export default Breakfast;

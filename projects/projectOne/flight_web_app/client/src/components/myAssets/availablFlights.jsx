@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from 'uuid'
 export const flightData = [
     {
         id: uuidv4(),
-        logo: '',
+        logo: 'FAA',
         airlineName: 'FAA Flights',
         from: 'New York',
         to: 'Los Angeles',
@@ -13,7 +13,7 @@ export const flightData = [
     },
     {
         id: uuidv4(),
-        logo: '',
+        logo: 'CA',
         airlineName: 'Chicago Airlines',
         from: 'Chicago',
         to: 'Miami',
@@ -24,7 +24,7 @@ export const flightData = [
     }
     , {
         id: uuidv4(),
-        logo: '',
+        logo: 'KQ',
         airlineName: 'KQ Flights',
         from: 'Mombasa',
         to: 'Narobi',
@@ -35,7 +35,7 @@ export const flightData = [
     }
     , {
         id: uuidv4(),
-        logo: '',
+        logo: 'DELTA',
         airlineName: 'Delta Arlines',
         from: 'New York',
         to: 'Los Angeles',
@@ -46,7 +46,7 @@ export const flightData = [
     }
     , {
         id: uuidv4(),
-        logo: '',
+        logo: 'AA',
         airlineName: 'American Airlines',
         from: 'Miami',
         to: 'New York',
@@ -57,7 +57,7 @@ export const flightData = [
     },
     {
         id: uuidv4(),
-        logo: '',
+        logo: 'UA',
         airlineName: 'United Airlines',
         from: 'San Francisco',
         to: 'Denver',
@@ -68,7 +68,7 @@ export const flightData = [
     },
     {
         id: uuidv4(),
-        logo: '',
+        logo: 'AOUTH AIRLINES',
         airlineName: 'Southwest Airlines',
         from: 'Chicago',
         to: 'Las vegas',
@@ -79,7 +79,7 @@ export const flightData = [
     },
     {
         id: uuidv4(),
-        logo: '',
+        logo: 'EMIRTAES',
         airlineName: 'Emirates',
         from: 'Dubai',
         to: 'New York',
@@ -90,7 +90,7 @@ export const flightData = [
     },
     {
         id: uuidv4(),
-        logo: '',
+        logo: 'LUFT',
         airlineName: 'Lufthasa ',
         from: 'Franfurt',
         to: 'Los Angeles',
@@ -101,7 +101,7 @@ export const flightData = [
     },
     {
         id: uuidv4(),
-        logo: '',
+        logo: 'BA',
         airlineName: 'British Airways',
         from: 'London',
         to: 'New York',
@@ -112,7 +112,7 @@ export const flightData = [
     },
     {
         id: uuidv4(),
-        logo: '',
+        logo: 'QA',
         airlineName: 'Qatar Airways',
         from: 'Doha',
         to: 'Los Angeles',

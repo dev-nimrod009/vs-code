@@ -1,0 +1,34 @@
+#root {
+    --primary-color: #007bff;
+    --text-color-2: #333;
+    --default-text-color: #555;
+    --background-color-1: #ffffff;
+    --background-color-hover:#f0f0f0;
+    --income-color:#28a745;
+    --expense-color:#dc3545;
+    --border-color:#e0e0e0;
+    --secondary-color:#6c757d;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+
+
+}
+
+.app-container {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    &__main {
+        flex-grow: 1;
+        padding: 20px;
+
+    }
+
+}

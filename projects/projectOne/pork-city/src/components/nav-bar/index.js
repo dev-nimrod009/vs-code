@@ -9,7 +9,8 @@ export default function Navbar({ handleCategoryChange }) {
     return (
         <nav className="navbar">
 
-            <button className="breakfast" onClick={() => handleCategoryChange('breakfast')}> Breakfast and Snacks</button>
+            <button className="breakfast" onClick={() => handleCategoryChange('breakfast')}> Breakf
+                ast and Snacks</button>
             <button className="foods" onClick={() => handleCategoryChange('foodsAndDrinks')}> Foods  </button>
             <button className="desserts" onClick={() => handleCategoryChange('desserts')}> Desserts and Drinks</button>
 

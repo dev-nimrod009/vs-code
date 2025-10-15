@@ -1,0 +1,19 @@
+{
+  "name": "finance-tracker-server",
+  "type": "module",
+  "private": true,
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server-side.js"
+  },
+  "dependencies": {
+    "axios": "^1.12.2",
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^8.18.1",
+    "recharts": "^3.2.1",
+    "uuid": "^11.1.0"
+  }
+}

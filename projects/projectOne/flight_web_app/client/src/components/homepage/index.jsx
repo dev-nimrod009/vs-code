@@ -20,7 +20,7 @@ export default function Homepage() {
 
     const handleBookNow = () => {
 
-        navigate('/booking', { state: { flightDetails } })
+        navigate('/flights', { state: { flightDetails } })
 
     }
     const handleExplore = () => {

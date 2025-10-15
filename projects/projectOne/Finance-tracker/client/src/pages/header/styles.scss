@@ -1,0 +1,122 @@
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #f0f2f5;
+    --text-color-dark: #333;
+    --text-color-light: #666;
+    --border-color: #e0e6ed;
+    --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--secondary-color);
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    height: 60px;
+    background-color: var(--card-background-color, #ffffff);
+    box-shadow: var(--box-shadow);
+    gap: 20px;
+    border-radius: 0 0 12px 12px;
+}
+
+.header-section__logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.03);
+    }
+}
+
+.header-section__navigation-section {
+    display: flex;
+    gap: 2.5rem;
+    flex-grow: 1;
+    justify-content: center;
+
+    button {
+        background: none;
+        color: var(--text-color-light);
+        border: none;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        transition: all 0.2s ease-in-out;
+
+        &.active {
+            color: var(--primary-color);
+            background-color: var(--secondary-color);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            font-weight: bold;
+        }
+
+        &:hover {
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+    }
+}
+
+.header-section__my {
+    position: relative;
+    display: inline-block;
+
+    &__account {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text-color-dark);
+        cursor: pointer;
+        background-color: var(--secondary-color);
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            background-color: darken(#f0f2f5, 5%);
+        }
+    }
+
+    &__options {
+        position: absolute;
+        top: calc(100% + 10px);
+        right: 0;
+        background-color: var(--card-background-color, #ffffff);
+        border-radius: 8px;
+        box-shadow: var(--box-shadow);
+        z-index: 1000;
+        padding: 0.5rem 0;
+        min-width: 150px;
+        display: flex;
+        flex-direction: column;
+
+        button {
+            width: 100%;
+            text-align: left;
+            font-size: 0.9rem;
+            color: var(--text-color-dark);
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.75rem 1.25rem;
+            transition: background-color 0.2s ease-in-out;
+
+            &:hover {
+                background-color: var(--secondary-color);
+            }
+        }
+    }
+}

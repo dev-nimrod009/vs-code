@@ -9,7 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "preact": "^10.26.9"
+    "axios": "^1.10.0",
+    "bcrypt": "^6.0.0",
+    "express": "^5.1.0",
+    "fs": "^0.0.1-security",
+    "preact": "^10.26.9",
+    "react-router-dom": "^7.6.2",
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.10.1",

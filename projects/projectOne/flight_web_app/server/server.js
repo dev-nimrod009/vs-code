@@ -22,9 +22,75 @@ const userSchema = new mongoose.Schema({
     fullName: { type: String }
 
 })
+const bookingSchema = new mongoose.Schema({
+    id: { type: String, unique: true },
+    airlineName: { type: String, required: true },
+    from: { type: String, required: true },
+    to: { type: String, required: true },
+    departure: { type: Number, required: true },
+    arrival: { type: Number, required: true },
+    price: { type: Number, required: true },
+
+    email: { type: String, required: true },
+    phone: { type: Number, required: true },
+    name: { type: String, required: true }
+})
+
+const flightsSchema = new mongoose.Schema({
+    id: { type: String, unique: true },
+    logo: { type: String },
+    airlineName: { type: String, required: true },
+    from: { type: String, required: true },
+    to: { type: String, required: true },
+    departure: { type: Number, required: true },
+    arrival: { type: Number, required: true },
+    price: { type: Number, required: true },
+
+})
 const User = mongoose.model('User', userSchema)
+const FlightModel = mongoose.model('Flight', flightsSchema)
+const BookingDetails = mongoose.model('Booking Details', bookingSchema)
 
 
+
+app.get('/flights', async (req, res) => {
+    try {
+        const flights = await FlightModel.find({})
+        return res.json(flights)
+
+    } catch (error) {
+        console.log(error)
+        return res.status(500).json({ message: 'Error Fetching data' })
+    }
+
+
+})
+
+app.post('/userBooking', async (req, res) => {
+    try {
+
+        const { flightDetails, personalDetails } = req.body
+
+        const savingData = {
+            airlineName: flightDetails.airlineName,
+            id: flightDetails.id,
+            from: flightDetails.from,
+            to: flightDetails.to,
+            departure: flightDetails.departure,
+            arrival: flightDetails.arrival,
+            price: flightDetails.price,
+            email: personalDetails.email,
+            phone: personalDetails.phone,
+            name: personalDetails.name,
+        }
+        const savedData = BookingDetails(savingData)
+        await savedData.save()
+        return res.status(200).json({ message: 'Booked' })
+
+    } catch (error) {
+        console.log(error)
+    }
+})
 app.post('/api/user-signin', async (req, res) => {
     try {
 
